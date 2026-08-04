@@ -1,0 +1,891 @@
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+
+    --purple-dark: #3d205f;
+    --purple: #6d4299;
+    --purple-light: #cdb7e9;
+
+    --gold: #c7a24a;
+
+    --white: #ffffff;
+    --cream: #faf8fc;
+
+    --text: #3b3440;
+
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    background: var(--cream);
+
+    color: var(--text);
+
+    overflow-x: hidden;
+
+}
+
+
+h1,
+h2,
+h3 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+}
+
+
+
+/* =========================
+   OPENING
+========================= */
+
+
+.opening {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #35194f,
+        #7046a0
+    );
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    z-index:1000;
+
+    transition:1s;
+
+}
+
+
+.opening.hide {
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
+
+
+
+.opening-flower {
+
+    width:180px;
+
+    animation:
+
+    flowerFloat 4s infinite ease-in-out;
+
+}
+
+
+.opening p {
+
+    color:white;
+
+    font-size:2rem;
+
+    max-width:500px;
+
+    margin:30px;
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+}
+
+
+.opening button {
+
+
+    background:white;
+
+    color:var(--purple-dark);
+
+    border:none;
+
+    padding:15px 45px;
+
+    border-radius:40px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+
+}
+
+
+.opening button:hover {
+
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/* =========================
+   HERO
+========================= */
+
+
+.hero {
+
+
+    height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(61,32,95,.95),
+
+        rgba(109,66,153,.85)
+
+    );
+
+
+}
+
+
+
+.hero-content {
+
+
+    color:white;
+
+    z-index:2;
+
+
+}
+
+
+
+.small-title {
+
+
+    letter-spacing:8px;
+
+    text-transform:uppercase;
+
+    font-size:.9rem;
+
+}
+
+
+
+.hero h1 {
+
+
+    font-size:7rem;
+
+    margin:10px 0;
+
+    font-weight:700;
+
+
+}
+
+
+.hero h2 {
+
+
+    font-size:4rem;
+
+    color:#f5df9a;
+
+
+}
+
+
+
+.date {
+
+
+    margin-top:30px;
+
+    font-size:1.2rem;
+
+}
+
+
+
+/* flores */
+
+
+.flower {
+
+
+    position:absolute;
+
+    opacity:.12;
+
+    width:450px;
+
+}
+
+
+.flower-one {
+
+    top:-100px;
+
+    left:-100px;
+
+}
+
+
+.flower-two {
+
+
+    bottom:-120px;
+
+    right:-100px;
+
+}
+
+
+
+/* boton */
+
+
+.scroll-button {
+
+
+    display:inline-block;
+
+    margin-top:45px;
+
+    padding:16px 40px;
+
+    border-radius:50px;
+
+    background:white;
+
+    color:var(--purple-dark);
+
+    text-decoration:none;
+
+    transition:.3s;
+
+
+}
+
+
+.scroll-button:hover {
+
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+    0 20px 40px rgba(0,0,0,.25);
+
+
+}
+
+
+
+
+/* =========================
+ COUNTDOWN
+========================= */
+
+
+.countdown-section {
+
+
+    padding:100px 20px;
+
+    text-align:center;
+
+
+}
+
+
+.countdown-section h2 {
+
+
+    font-size:3rem;
+
+    margin-bottom:50px;
+
+}
+
+
+
+.countdown {
+
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+
+}
+
+
+
+.time-box {
+
+
+    width:130px;
+
+    height:130px;
+
+    background:white;
+
+    border-radius:25px;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.08);
+
+
+}
+
+
+.time-box span {
+
+
+    font-size:3rem;
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    color:var(--purple);
+
+
+}
+
+
+
+.time-box small {
+
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+}
+
+
+
+/* =========================
+ MESSAGE
+========================= */
+
+
+.message {
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:60px;
+
+    padding:100px 10%;
+
+
+}
+
+
+
+.message-image {
+
+
+    flex:1;
+
+}
+
+
+.message-image img {
+
+
+    width:100%;
+
+    border-radius:30px;
+
+    box-shadow:
+
+    0 20px 40px rgba(0,0,0,.15);
+
+
+}
+
+
+
+.message-text {
+
+
+    flex:1;
+
+}
+
+
+
+.message-text h2 {
+
+
+    font-size:3rem;
+
+    margin-bottom:30px;
+
+
+}
+
+
+.message-text p {
+
+
+    line-height:2;
+
+    font-size:1.1rem;
+
+}
+
+
+
+
+/* =========================
+ QUOTE
+========================= */
+
+
+.quote {
+
+
+    min-height:450px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+
+    background:
+
+
+    linear-gradient(
+
+    rgba(80,40,120,.65),
+
+    rgba(80,40,120,.65)
+
+    ),
+
+    url("assets/fondo.jpg");
+
+
+    background-size:cover;
+
+    background-position:center;
+
+
+    color:white;
+
+
+}
+
+
+
+.quote h2 {
+
+
+    font-size:4rem;
+
+}
+
+
+.quote p {
+
+
+    font-size:1.4rem;
+
+}
+
+
+
+/* =========================
+ DETAILS
+========================= */
+
+
+.details {
+
+
+    padding:100px 10%;
+
+    text-align:center;
+
+
+}
+
+
+.details h2 {
+
+
+    font-size:3rem;
+
+    margin-bottom:50px;
+
+
+}
+
+
+
+.cards {
+
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+
+}
+
+
+
+.card {
+
+
+    background:white;
+
+    padding:40px 20px;
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.08);
+
+
+}
+
+
+.card h3 {
+
+
+    font-size:2rem;
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+/* =========================
+ GALLERY
+========================= */
+
+
+.gallery {
+
+
+    padding:100px 10%;
+
+    text-align:center;
+
+
+}
+
+
+
+.gallery-grid {
+
+
+    margin-top:40px;
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(250px,1fr));
+
+
+    gap:20px;
+
+
+}
+
+
+
+.gallery-grid img {
+
+
+    width:100%;
+
+    height:300px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+
+    transition:.4s;
+
+
+}
+
+
+.gallery-grid img:hover {
+
+
+    transform:scale(1.05);
+
+
+}
+
+
+
+
+/* =========================
+ RSVP
+========================= */
+
+
+.rsvp {
+
+
+    padding:100px 20px;
+
+    text-align:center;
+
+    background:#f1eafa;
+
+
+}
+
+
+
+.rsvp input,
+
+.rsvp select {
+
+
+    display:block;
+
+    margin:20px auto;
+
+    width:min(400px,90%);
+
+    padding:15px;
+
+    border-radius:30px;
+
+    border:1px solid #ddd;
+
+
+}
+
+
+.rsvp button {
+
+
+    padding:15px 40px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:var(--purple);
+
+    color:white;
+
+    cursor:pointer;
+
+
+}
+
+
+
+/* =========================
+ FOOTER
+========================= */
+
+
+footer {
+
+
+    background:var(--purple-dark);
+
+    color:white;
+
+    padding:60px;
+
+    text-align:center;
+
+
+}
+
+
+footer img {
+
+
+    width:100px;
+
+    opacity:.8;
+
+
+}
+
+
+
+/* =========================
+ ANIMATION
+========================= */
+
+
+@keyframes flowerFloat {
+
+
+    50% {
+
+        transform:
+        translateY(-20px);
+
+    }
+
+
+}
+
+
+
+/* =========================
+ MOBILE
+========================= */
+
+
+@media(max-width:768px){
+
+
+.hero h1 {
+
+    font-size:4rem;
+
+}
+
+
+.hero h2 {
+
+    font-size:2.8rem;
+
+}
+
+
+
+.message {
+
+
+    flex-direction:column;
+
+}
+
+
+.message-text h2 {
+
+
+    font-size:2.5rem;
+
+}
+
+
+.quote h2 {
+
+
+    font-size:3rem;
+
+}
+
+
+.opening p {
+
+
+    font-size:1.5rem;
+
+}
+
+
+}
