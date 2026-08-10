@@ -38,7 +38,7 @@ h3 {
 }
 
 /* =========================
-   OPENING
+   OPENING (MARCO DE LA FLOR)
 ========================= */
 .opening {
     position: fixed;
@@ -58,9 +58,24 @@ h3 {
     pointer-events: none;
 }
 
-.opening-flower {
-    width: 180px;
+/* Marco bonito alrededor de la flor inicial */
+.flower-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid var(--gold-accent);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 25px rgba(229, 195, 120, 0.2);
     animation: flowerFloat 4s infinite ease-in-out;
+}
+
+.opening-flower {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    border-radius: 50%;
 }
 
 .opening p {
@@ -163,7 +178,7 @@ h3 {
 }
 
 /* =========================
-   MESSAGE
+   MESSAGE (FOTOS LADO A LADO)
 ========================= */
 .message {
     display: flex;
@@ -176,10 +191,18 @@ h3 {
     flex: 1;
 }
 
-.message-image img {
-    width: 100%;
-    border-radius: 30px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, .15);
+/* Alineación de las dos fotos juntas */
+.message-gallery {
+    display: flex;
+    gap: 20px;
+}
+
+.message-gallery img {
+    width: 50%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .15);
 }
 
 .message-text {
@@ -320,7 +343,7 @@ h3 {
 }
 
 /* =========================
-   GALLERY
+   GALLERY (FOTOS CUADRADAS)
 ========================= */
 .gallery {
     padding: 100px 10%;
@@ -339,20 +362,21 @@ h3 {
     gap: 20px;
 }
 
+/* Mantiene todas las imágenes cuadradas */
 .gallery-grid img {
     width: 100%;
-    height: 300px;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
-    border-radius: 25px;
+    border-radius: 20px;
     transition: .4s;
 }
 
 .gallery-grid img:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 /* =========================
-   RSVP (NUEVA SECCIÓN)
+   RSVP
 ========================= */
 .rsvp {
     padding: 100px 20px;
@@ -415,7 +439,7 @@ footer img {
 
 @keyframes flowerFloat {
     50% {
-        transform: translateY(-20px);
+        transform: translateY(-12px);
     }
 }
 
@@ -437,8 +461,13 @@ footer img {
    RESPONSIVE (MOBILE)
 ========================= */
 @media screen and (max-width: 768px) {
+    .flower-frame {
+        padding: 15px;
+    }
+
     .opening-flower {
-        width: 120px;
+        width: 100px;
+        height: 100px;
     }
 
     .opening p {
@@ -496,6 +525,16 @@ footer img {
         gap: 30px;
     }
 
+    .message-gallery {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .message-gallery img {
+        width: 100%;
+        height: 280px;
+    }
+
     .message-text h2,
     .location-text h2,
     .details h2,
@@ -534,10 +573,6 @@ footer img {
 
     .card {
         padding: 30px 20px;
-    }
-
-    .gallery-grid img {
-        height: 260px;
     }
 
     footer {
