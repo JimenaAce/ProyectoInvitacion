@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>60 años de Norma</title>
+    <title>6O años de Norma</title>
     <link rel="stylesheet" href="style.css">
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,6 +26,17 @@
             Abrir invitación
         </button>
     </div>
+
+    <!-- BOTÓN FLOTANTE PARA CONTROLAR EL AUDIO -->
+    <button id="music-control" class="music-btn" onclick="toggleMusic()" aria-label="Control de música">
+        🔊
+    </button>
+
+    <!-- ELEMENTO DE AUDIO (Asegúrate de que la ruta coincida con tu archivo .mp3) -->
+    <audio id="bg-music" loop preload="auto">
+        <source src="assets/instrumental.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
 
     <!-- HERO -->
     <header class="hero">
@@ -130,7 +141,7 @@
         <p class="rsvp-notice">
             Agradecemos confirmar tu asistencia con anticipación para poder asignarte tus boletos y lugar en las mesas.
         </p>
-        <a href="https://wa.me/525546189844?text=Hola,%20confirmo%20mi%20asistencia%20para%20la%20fiesta%20de%20Norma" target="_blank" class="whatsapp-button" rel="noopener noreferrer">
+        <a href="https://wa.me/525546189844?text=Hola,%20confirmo%20mi%20asistencia%20para%20la%20fiesta%20de%20Norma%20Olivia" target="_blank" class="whatsapp-button" rel="noopener noreferrer">
             Confirmar por WhatsApp
         </a>
         <p class="phone-number">O llamando al: <strong>+52 55 4618 9844</strong></p>

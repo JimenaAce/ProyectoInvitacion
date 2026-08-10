@@ -100,7 +100,7 @@ h3 {
 
 .opening button:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* =========================
@@ -253,7 +253,7 @@ h3 {
 
 .quote a:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* =========================
@@ -578,55 +578,100 @@ footer img {
     /* =========================
    FOOTER & ANIMATIONS
 ========================= */
-footer {
-    background: var(--burgundy-dark);
-    color: var(--white);
-    padding: 60px 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-/* Marco elegante para la flor de cierre */
-.footer-flower-frame {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
-    border: 2px solid var(--gold-accent);
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 0 20px rgba(229, 195, 120, 0.2);
-}
-
-.footer-flower-frame img {
-    width: 90px;
-    height: 90px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-footer p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-}
-
-/* Ajuste Responsive para móviles */
-@media screen and (max-width: 768px) {
     footer {
-        padding: 40px 20px;
+        background: var(--burgundy-dark);
+        color: var(--white);
+        padding: 60px 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 
+    /* Marco elegante para la flor de cierre */
     .footer-flower-frame {
-        padding: 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        border: 2px solid var(--gold-accent);
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 0 20px rgba(229, 195, 120, 0.2);
     }
 
     .footer-flower-frame img {
-        width: 70px;
-        height: 70px;
+        width: 90px;
+        height: 90px;
+        object-fit: cover;
+        border-radius: 50%;
     }
-}
+
+    footer p {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    /* Ajuste Responsive para móviles */
+    @media screen and (max-width: 768px) {
+        footer {
+            padding: 40px 20px;
+        }
+
+        .footer-flower-frame {
+            padding: 10px;
+        }
+
+        .footer-flower-frame img {
+            width: 70px;
+            height: 70px;
+        }
+    }
+
+    /* =========================
+   BOTÓN FLOTANTE DE MÚSICA
+========================= */
+    .music-btn {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: var(--burgundy);
+        color: var(--white);
+        border: 2px solid var(--gold-accent);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        z-index: 999;
+        display: none;
+        /* Se muestra únicamente cuando se abre la invitación */
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+    }
+
+    .music-btn:hover {
+        transform: scale(1.1);
+        background: var(--burgundy-light);
+    }
+
+    .music-btn.muted {
+        background: #555;
+        border-color: #888;
+        opacity: 0.8;
+    }
+
+    @media screen and (max-width: 768px) {
+        .music-btn {
+            bottom: 20px;
+            right: 20px;
+            width: 45px;
+            height: 45px;
+            font-size: 1rem;
+        }
+    }
 }
