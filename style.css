@@ -1,12 +1,14 @@
 /* =========================
-   VARIABLES
+   VARIABLES (PALETA BORGOÑA / VINO)
 ========================= */
 :root {
-    --purple-dark: #3d205f;
-    --purple: #6d4299;
+    --burgundy-dark: #2d0b13;
+    --burgundy: #5a1827;
+    --burgundy-light: #800e2e;
+    --gold-accent: #e5c378;
     --white: #ffffff;
-    --cream: #faf8fc;
-    --text: #3b3440;
+    --cream: #fbf7f6;
+    --text: #36292b;
 }
 
 /* =========================
@@ -41,7 +43,7 @@ h3 {
 .opening {
     position: fixed;
     inset: 0;
-    background: linear-gradient(135deg, #35194f, #7046a0);
+    background: linear-gradient(135deg, var(--burgundy-dark), var(--burgundy-light));
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -71,17 +73,19 @@ h3 {
 
 .opening button {
     background: var(--white);
-    color: var(--purple-dark);
+    color: var(--burgundy-dark);
     border: none;
     padding: 15px 45px;
     border-radius: 40px;
     font-size: 16px;
+    font-weight: 500;
     cursor: pointer;
     transition: .4s;
 }
 
 .opening button:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 /* =========================
@@ -95,7 +99,7 @@ h3 {
     text-align: center;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, rgba(61, 32, 95, .95), rgba(109, 66, 153, .85));
+    background: linear-gradient(135deg, rgba(45, 11, 19, 0.95), rgba(128, 14, 46, 0.88));
 }
 
 .hero-content {
@@ -117,7 +121,7 @@ h3 {
 
 .hero h2 {
     font-size: 4rem;
-    color: #f5df9a;
+    color: var(--gold-accent);
 }
 
 .date {
@@ -147,8 +151,9 @@ h3 {
     padding: 16px 40px;
     border-radius: 50px;
     background: var(--white);
-    color: var(--purple-dark);
+    color: var(--burgundy-dark);
     text-decoration: none;
+    font-weight: 500;
     transition: .3s;
 }
 
@@ -184,6 +189,7 @@ h3 {
 .message-text h2 {
     font-size: 3rem;
     margin-bottom: 30px;
+    color: var(--burgundy-dark);
 }
 
 /* =========================
@@ -195,7 +201,7 @@ h3 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(80, 40, 120, .65), rgba(80, 40, 120, .65)), url("assets/fondo.jpg");
+    background: linear-gradient(rgba(45, 11, 19, 0.75), rgba(90, 24, 39, 0.75)), url("assets/fondo.jpg");
     background-size: cover;
     background-position: center;
     color: var(--white);
@@ -215,7 +221,7 @@ h3 {
     margin-top: 20px;
     padding: 12px 30px;
     background: var(--white);
-    color: var(--purple-dark);
+    color: var(--burgundy-dark);
     text-decoration: none;
     border-radius: 30px;
     font-weight: 500;
@@ -224,6 +230,7 @@ h3 {
 
 .quote a:hover {
     transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 /* =========================
@@ -237,6 +244,7 @@ h3 {
 .details h2 {
     font-size: 3rem;
     margin-bottom: 50px;
+    color: var(--burgundy-dark);
 }
 
 .cards {
@@ -250,11 +258,13 @@ h3 {
     padding: 40px 20px;
     border-radius: 25px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+    border-top: 4px solid var(--burgundy-light);
 }
 
 .card h3 {
     font-size: 2rem;
     margin-bottom: 15px;
+    color: var(--burgundy);
 }
 
 /* =========================
@@ -276,6 +286,7 @@ h3 {
 .location-text h2 {
     font-size: 3rem;
     margin-bottom: 25px;
+    color: var(--burgundy-dark);
 }
 
 .location-text p {
@@ -286,7 +297,7 @@ h3 {
 .location-text a {
     display: inline-block;
     padding: 15px 35px;
-    background: var(--purple);
+    background: var(--burgundy);
     color: var(--white);
     text-decoration: none;
     border-radius: 40px;
@@ -294,6 +305,7 @@ h3 {
 }
 
 .location-text a:hover {
+    background: var(--burgundy-light);
     transform: translateY(-4px);
 }
 
@@ -317,6 +329,7 @@ h3 {
 
 .gallery h2 {
     font-size: 3rem;
+    color: var(--burgundy-dark);
 }
 
 .gallery-grid {
@@ -339,43 +352,57 @@ h3 {
 }
 
 /* =========================
-   RSVP
+   RSVP (NUEVA SECCIÓN)
 ========================= */
 .rsvp {
     padding: 100px 20px;
     text-align: center;
-    background: #f1eafa;
+    background: #f4eaeb;
 }
 
 .rsvp h2 {
     font-size: 3rem;
     margin-bottom: 20px;
+    color: var(--burgundy-dark);
 }
 
-.rsvp input,
-.rsvp select {
-    display: block;
-    margin: 20px auto;
-    width: min(400px, 90%);
-    padding: 15px;
-    border-radius: 30px;
-    border: 1px solid #ddd;
+.rsvp-notice {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text);
 }
 
-.rsvp button {
-    padding: 15px 40px;
-    border: none;
+.whatsapp-button {
+    display: inline-block;
+    padding: 16px 40px;
     border-radius: 30px;
-    background: var(--purple);
+    background: var(--burgundy);
     color: var(--white);
-    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: .3s;
+}
+
+.whatsapp-button:hover {
+    background: var(--burgundy-light);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(90, 24, 39, 0.25);
+}
+
+.phone-number {
+    margin-top: 25px;
+    font-size: 1rem;
+    color: var(--text);
 }
 
 /* =========================
    FOOTER & ANIMATIONS
 ========================= */
 footer {
-    background: var(--purple-dark);
+    background: var(--burgundy-dark);
     color: var(--white);
     padding: 60px;
     text-align: center;
@@ -390,6 +417,20 @@ footer img {
     50% {
         transform: translateY(-20px);
     }
+}
+
+/* =========================
+   ANIMACIÓN AL HACER SCROLL
+========================= */
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* =========================
@@ -499,27 +540,11 @@ footer img {
         height: 260px;
     }
 
-    .rsvp input,
-    .rsvp select {
-        font-size: 16px;
-    }
-
     footer {
         padding: 40px 20px;
     }
 
     footer img {
         width: 80px;
-    }
-
-    .hidden {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.8s ease-out;
-    }
-
-    .show {
-        opacity: 1;
-        transform: translateY(0);
     }
 }
